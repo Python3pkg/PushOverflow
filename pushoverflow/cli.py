@@ -10,7 +10,7 @@ import calendar
 try:
     from html.parser import HTMLParser
 except ImportError:
-    from HTMLParser import HTMLParser
+    from html.parser import HTMLParser
 from pushoverflow import __version__
 
 
@@ -171,7 +171,7 @@ def main():
         config.get("Pushover", "appkey")
         config.get("Pushover", "userkey")
     except (configparser.NoSectionError, configparser.NoOptionError) as err:
-        print ("Missing properties in configuration file:", err)
+        print(("Missing properties in configuration file:", err))
         return
 
     for section in config.sections():

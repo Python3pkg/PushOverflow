@@ -9,7 +9,7 @@ try:
 except ImportError:
     from mock import call, patch
 try:
-    from StringIO import StringIO
+    from io import StringIO
 except ImportError:
     from io import StringIO
 
